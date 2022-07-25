@@ -130,6 +130,13 @@ function App() {
     }));
   };
 
+  useEffect(() => {
+    checkIfWalletIsConnected();
+    getBankName();
+    getbankOwnerHandler();
+    customerBalanceHandler()
+  }, [isWalletConnected]);
+  
   const deposityMoneyHandler = async (event) => {
     try {
       event.preventDefault();
