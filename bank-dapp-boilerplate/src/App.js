@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ethers, utils } from "ethers";
-import abi from "./contracts/BankDapp.json";
+import abi from "./contracts/BankDappTest.json";
 
 function App() {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
@@ -16,7 +16,7 @@ function App() {
   const [customerAddress, setCustomerAddress] = useState(null);
   const [error, setError] = useState(null);
 
-  const contractAddress = "0x1e6C727A649bfDEC8d8C8EC2074b19423EBe4181";
+  const contractAddress = "0x6cC76AA41527846e0e70c08f2B3d506C5872390b";
   const contractABI = abi.abi;
 
   const checkIfWalletIsConnected = async () => {
@@ -136,7 +136,7 @@ function App() {
     getbankOwnerHandler();
     customerBalanceHandler()
   }, [isWalletConnected]);
-  
+
   const deposityMoneyHandler = async (event) => {
     try {
       event.preventDefault();
