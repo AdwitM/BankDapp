@@ -165,7 +165,7 @@ function App() {
         let myAddress = await signer.getAddress()
         console.log("provider signer...", myAddress);
 
-        const txn = await bankContract.withdrawMoney({value: ethers.utils.parseEther(inputValue.withdraw)});
+        const txn = await bankContract.withdrawMoney(myAddress, ethers.utils.parseEther(inputValue.withdraw));
         console.log("Withdrawing money...");
         await txn.wait();
         console.log("Money with drew...done", txn.hash);
