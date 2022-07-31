@@ -2,7 +2,7 @@ require('@nomiclabs/hardhat-waffle');
 require('dotenv').config();
 
 module.exports = {
-  solidity: "0.8.6",
+  solidity: "0.8.15",
   networks: {
     rinkeby: {
       url: `${process.env.POKT_RINKEBY_URL}`,
