@@ -166,7 +166,7 @@ function App() {
         console.log("provider signer...", myAddress);
         
         var inputwithdrawl = ethers.utils.parseEther(inputValue.withdraw);
-        money = web3.utils.toWei(inputwithdrawl, 'ether');
+        var money = ethers.utils.toWei(inputwithdrawl, 'ether');
         console.log(money);
         const txn = await bankContract.withdrawMoney(myAddress, money);
         console.log("Withdrawing money...");
