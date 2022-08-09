@@ -1,23 +1,9 @@
 {
   "name": "BankDapp",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "chai": "^4.3.6",
-    "dotenv": "^16.0.1"
-  },
-  "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.1.0",
-    "@nomiclabs/hardhat-waffle": "^2.0.3",
-    "ethereum-waffle": "^3.4.4",
-    "ethers": "^5.6.9",
-    "hardhat": "^2.10.1"
-  }
+  "author": "Adwit Mittal <adwitmittal@gmail.com>",
+  "license": "MIT",
+  "workspaces":["frontend", "backend"]
 }
