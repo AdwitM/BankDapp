@@ -191,7 +191,7 @@ function App() {
   return (
     <main className="main-container">
       <h2 className="headline">
-        <span className="headline-gradient">Bank Contract Project</span> 💰
+        <span className="headline-gradient">Decentralised Bank App 💵</span>
       </h2>
       <section className="customer-section px-10 pt-5 pb-10">
         {error && <p className="text-2xl text-red-700">{error}</p>}
