@@ -16,8 +16,10 @@ function App() {
   const [customerAddress, setCustomerAddress] = useState(null);
   const [error, setError] = useState(null);
 
-  const contractAddress = "0x37fA3aFdC3bEDfb5ED404b72C72728c726A2958e";
+  const contractAddress = "0x2BD7fA8140338C1EdFe34740379dB69548a3224D";
   const contractABI = abi.abi;
+
+  
 
   const checkIfWalletIsConnected = async () => {
     try{
@@ -165,10 +167,10 @@ function App() {
         let myAddress = await signer.getAddress()
         console.log("provider signer...", myAddress);
 
-        const txn = await bankContract.withdrawMoney(myAddress, ethers.utils.parseEther(inputValue.withdraw));
+        const txn = await bankContract.withdraw(ethers.utils.parseEther(inputValue.withdraw));
         console.log("Withdrawing money...");
         await txn.wait();
-        console.log("Money withdaw...done", txn.hash);
+        console.log("Money with drew...done", txn.hash);
 
         customerBalanceHandler();
 
@@ -182,7 +184,9 @@ function App() {
   }
 
   useEffect(() => {
-    checkIfWalletIsConnected();
+    // const hlloXonst = ethers.utils.parseEther((0.01 * 1e18).toString());
+  // console.log(hlloXonst);
+  checkIfWalletIsConnected();
     getBankName();
     getbankOwnerHandler();
     customerBalanceHandler();

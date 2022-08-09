@@ -10,4 +10,4 @@ Screenshots:
 
 <!-- <img src="https://user-images.githubusercontent.com/77715088/181905189-b6a31924-c067-492d-92cf-2c9556e83ae4.png" width="550"> -->
 
-Contract Address - [0x37fA3aFdC3bEDfb5ED404b72C72728c726A2958e](https://rinkeby.etherscan.io/address/0x37fA3aFdC3bEDfb5ED404b72C72728c726A2958e)  
+Contract Address - [0x2BD7fA8140338C1EdFe34740379dB69548a3224D](https://rinkeby.etherscan.io/address/0x2BD7fA8140338C1EdFe34740379dB69548a3224D)  

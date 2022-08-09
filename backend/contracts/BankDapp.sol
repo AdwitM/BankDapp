@@ -2,6 +2,8 @@
 
 pragma solidity ^0.8.15;
 
+import "hardhat/console.sol";
+
 contract BankDapp {
     address public bankOwner;
     string public bankName;
@@ -24,13 +26,19 @@ contract BankDapp {
         bankName = _name;
     }
 
-    function withdrawMoney(uint256 _amount) external payable {
-        require(
-            _amount <= customerBalance[msg.sender],
-            "insufficeint balance in bank account"
-        );
-        customerBalance[msg.sender] -= _amount;
-        payable(msg.sender).transfer(_amount);
+    function withdraw(uint256 _amount) external payable{
+        if(_amount <= customerBalance[msg.sender])
+        {
+            (bool success, ) = (msg.sender).call{value: _amount}("");
+            customerBalance[msg.sender] -= _amount;
+            require(success, "Failed to withdraw money");
+            console.log(msg.sender," withdrew ",_amount);
+        }
+        else
+        {
+            console.log("Insufficient Balance ");
+            console.log("Current Balance: ", customerBalance[msg.sender], "\n");
+        }
     }
 
     function checkCustomerBalance() external view returns (uint256) {
