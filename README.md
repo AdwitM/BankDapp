@@ -14,6 +14,3 @@ This Bank Dapp is written in Solidity and the smart contract was deployed using 
 <img src="https://i.ibb.co/ysY0gpd/deposit.jpg" width="550">  
 
 <img src="https://i.ibb.co/BrSQpjF/withdraw.jpg" width="550">  
-
-
- 
